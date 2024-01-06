@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <div className="w-10/12 mx-auto flex justify-between items-center pt-9 mb-32">
+        <header className="w-10/12 mx-auto flex justify-between items-center pt-9 mb-32">
             <h3 className="text-2xl font-semibold">pti.</h3>
             <div className="relative w-4/12 bg-transparent">
                 <button className="absolute h-full px-2">
@@ -15,7 +15,7 @@ const Header = () => {
                     <path d="M13.4171 14C19.2044 14 23.9145 18.3267 24.0725 23.7201L24.0766 24H21.9447C21.9447 19.5817 18.1267 16 13.4171 16C8.79622 16 5.03378 19.4478 4.89345 23.7508L4.88939 24H2.75748C2.75748 18.4772 7.52993 14 13.4171 14ZM13.4171 1C16.9493 1 19.8128 3.68629 19.8128 7C19.8128 10.3137 16.9493 13 13.4171 13C9.88478 13 7.02131 10.3137 7.02131 7C7.02131 3.68629 9.88478 1 13.4171 1ZM13.4171 3C11.0622 3 9.15322 4.79086 9.15322 7C9.15322 9.20914 11.0622 11 13.4171 11C15.7719 11 17.6809 9.20914 17.6809 7C17.6809 4.79086 15.7719 3 13.4171 3Z" fill="#EEEFF0" />
                 </svg>
             </button>
-        </div>
+        </header>
     );
 };
 
