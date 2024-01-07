@@ -1,21 +1,18 @@
 import './Popular.css'
 import { useEffect, useState } from 'react';
 import Loading from '../Loading/Loading';
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 // import required modules
 import { Navigation } from "swiper/modules";
 
 
 
-const Popular = ({selectedItem}) => {
+const Popular = () => {
     const [foods, setFoods] = useState();
 
     useEffect(() => {
@@ -23,33 +20,14 @@ const Popular = ({selectedItem}) => {
             .then(res => res.json())
             .then(data => {
                 const foodsArray = data.Items;
-                // if (selectedItem) {
-                //     foodsArray.insert(0, selectedItem)
-                //     setFoods(foodsArray);
-                // }
-                // else {
-                //     setFoods(foodsArray)
-                // }
                 setFoods(foodsArray)
             });
     }, [])
 
-
-
-    useEffect(() => {
-        // if (selectedItem) {
-        //     foods.insert(0, selectedItem);
-        //     console.log(foods);
-        //     //     setFoods(foodsArray);
-        // }
-        console.log(selectedItem);
-    }, [selectedItem])
-
     if (!foods) {
         return <Loading></Loading>
     }
-    // console.log(foods);
-    
+
     return (
         <div className='w-11/12 md:w-10/12 mx-auto relative'>
             <div className='flex justify-between me-7 mb-10'>
@@ -86,7 +64,6 @@ const Popular = ({selectedItem}) => {
                     )
                 }
             </Swiper>
-            <button className="btn btn-neutral" onClick={() => document.getElementById('my_modal_1').showModal()}>open modal</button>
         </div>
     );
 };

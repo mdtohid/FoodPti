@@ -22,15 +22,12 @@ const Recommended = () => {
             });
     }, [])
 
-
-
     if (!foods) {
         return <Loading></Loading>
     }
 
-
     return (
-        <div className='w-11/12 md:w-10/12 mx-auto relative mt-9 mb-36'>
+        <div className='w-11/12 md:w-10/12 mx-auto relative mt-16 mb-36'>
             <div className='flex justify-between me-7 mb-10'>
                 <h3 className='text-2xl font-semibold'>Recommended</h3>
                 <p className='text-[#FC6011] font-semibold'>See more</p>
