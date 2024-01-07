@@ -1,6 +1,7 @@
 import './App.css'
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header'
+import Popular from './Components/Popular/Popular'
 import boyAvatar from './image/boyAvatar.png'
 
 
@@ -18,6 +19,7 @@ function App() {
           <img className='-mt-[19%] lg:mt-0' src={boyAvatar} alt="" />
         </div>
       </div>
+      <Popular></Popular>
       <Footer></Footer>
     </div>
   )
