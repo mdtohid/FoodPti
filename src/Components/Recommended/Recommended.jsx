@@ -18,7 +18,7 @@ const Recommended = () => {
             .then(res => res.json())
             .then(data => {
                 const foodsArray = data.Items;
-                setFoods(foodsArray)
+                setFoods(foodsArray.reverse());
             });
     }, [])
 
